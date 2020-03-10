@@ -1,0 +1,8 @@
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\bin\Debug\netstandard2.0\pagamentosdominiocomparti.deps.json
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\bin\Debug\netstandard2.0\pagamentosdominiocomparti.dll
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\bin\Debug\netstandard2.0\pagamentosdominiocomparti.pdb
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\obj\Debug\netstandard2.0\pagamentosdominiocomparti.csprojAssemblyReference.cache
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\obj\Debug\netstandard2.0\pagamentosdominiocomparti.AssemblyInfoInputs.cache
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\obj\Debug\netstandard2.0\pagamentosdominiocomparti.AssemblyInfo.cs
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\obj\Debug\netstandard2.0\pagamentosdominiocomparti.dll
+C:\Cursos\Pagamentos\pagamentosdominiocomparti\obj\Debug\netstandard2.0\pagamentosdominiocomparti.pdb
