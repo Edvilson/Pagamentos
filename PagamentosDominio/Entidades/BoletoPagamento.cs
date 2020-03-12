@@ -1,4 +1,6 @@
 using System;
+using PagamentosDominio.ValueObjects;
+
 namespace PagamentosDominio.Entidades
 {
    
@@ -10,10 +12,10 @@ namespace PagamentosDominio.Entidades
                                DateTime dtExpiracao, 
                                decimal total, 
                                decimal totalPagamento, 
-                               string documento, 
+                               Document documento, 
                                string pagador, 
-                               string endereco, 
-                               string email):base(
+                               Endereco endereco, 
+                               Email email):base(
                                    data, 
                                    dtExpiracao, 
                                    total, 

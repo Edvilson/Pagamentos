@@ -9,8 +9,8 @@ namespace PagamentosDominioTeste
         [TestMethod]
         public void AdicionarAssinatura()
         {   
-            var assinatura = new Assinatura(null);
-            var estudante = new Estudante("Edvilson","Almeida","1245124511","edvilson.ads@gmail.com","Tes");
+           // var assinatura = new Assinatura(null);
+            //var estudante = new Estudante("Edvilson","1245124511","edvilson.ads@gmail.com","Tes");
             
         }
     }

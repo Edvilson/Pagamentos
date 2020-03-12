@@ -1,11 +1,13 @@
 using System;
+using PagamentosDominio.ValueObjects;
 using System.Collections.Generic;
+
 
 namespace PagamentosDominio.Entidades
 {
     public abstract class Pagamento // abstrato pois não pode ser instanciado a qualquer momento
     {
-        protected Pagamento(DateTime data, DateTime dtExpiracao, decimal total, decimal totalPagamento, string documento, string pagador, string endereco, string email)
+        protected Pagamento(DateTime data, DateTime dtExpiracao, decimal total, decimal totalPagamento, Document documento, string pagador, Endereco endereco, Email email)
         {
             Data = data;
             DtExpiracao = dtExpiracao;
@@ -22,11 +24,11 @@ namespace PagamentosDominio.Entidades
         public DateTime DtExpiracao { get; private set; }
         public decimal Total { get; private set; }
         public decimal TotalPagamento { get; private set; }
-        public string Documento { get; private set; }
+        public Document Documento { get; private set; }
         public string Pagador { get; private set; }
         public string Sequencia { get; private set; }
-        public string Endereco { get; private set; }        
-        public string Email { get; private set; }
+        public Endereco Endereco { get; private set; }        
+        public Email Email { get; private set; }
     }
 
 
