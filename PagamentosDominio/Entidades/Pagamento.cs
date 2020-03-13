@@ -1,11 +1,11 @@
 using System;
 using PagamentosDominio.ValueObjects;
 using System.Collections.Generic;
-
+using PagamentosDominioComparti.Entidade;
 
 namespace PagamentosDominio.Entidades
 {
-    public abstract class Pagamento // abstrato pois não pode ser instanciado a qualquer momento
+    public abstract class Pagamento : Entidade // abstrato pois não pode ser instanciado a qualquer momento
     {
         protected Pagamento(DateTime data, DateTime dtExpiracao, decimal total, decimal totalPagamento, Document documento, string pagador, Endereco endereco, Email email)
         {
@@ -18,6 +18,11 @@ namespace PagamentosDominio.Entidades
             Sequencia = Guid.NewGuid().ToString().Replace("-","").Substring(0,10).ToUpper();
             Endereco = endereco;
             Email = email;
+
+             AddNotifications(new Contract()
+                .Requires()
+                .IsGreaterThan(0, Total, "Pagamento.Total", "O total não ode ser 0"));
+
         }
 
         public DateTime Data { get; private set; }

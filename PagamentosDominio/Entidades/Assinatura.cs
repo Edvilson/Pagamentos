@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Flunt.Validations;
+using PagamentosDominioComparti.Entidade;
 
 namespace PagamentosDominio.Entidades
 {
-    public class Assinatura
+    public class Assinatura : Entidade
     {   
         private IList<Pagamento> _Pagamentos;
         public Assinatura(DateTime? dtExpiracao)
@@ -23,7 +25,14 @@ namespace PagamentosDominio.Entidades
 
         public void IncluirPagamento(Pagamento pagamento)
         {
+            
+            AddNotifications(new Contract()
+                .Requires()
+                .IsGreaterThan(DateTime.Now, pagamento.DtExpiracao, "Assinatura.Pagamentos", "A data do pagamento não pode ser atrasada"));
+            
             _Pagamentos.Add(pagamento);
+
+            //Validar se o pagamento esta valido antes de comitar a informação no BD;
         }
 
         public void Ativador()

@@ -7,6 +7,12 @@ namespace PagamentosDominio.ValueObjects
         public Email(string endereco)
         {
             Endereco = endereco;
+
+            AddNotifications(new Contract()
+                .Requires()
+                .IsEmail(Endereco,"Email.Endereco","E-mail Inválido")
+            );
+            
         }
 
         public string Endereco { get; private set; }

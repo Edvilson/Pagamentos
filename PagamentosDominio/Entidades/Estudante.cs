@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Flunt.Validations;
 using PagamentosDominio.ValueObjects;
 using PagamentosDominioComparti.Entidade;
 
@@ -8,12 +9,14 @@ namespace PagamentosDominio.Entidades
     public class Estudante : Entidade
     {
         private IList<Assinatura> _Assinaturas;
-        public Estudante(Name name, Document documento, Email email, string endereco)
+        public Estudante(Name name, Document documento, Email email)
         {
             Name = name;
             Documento = documento;
             Email = email;
-            _Assinaturas = new List<Assinatura>();
+            _Assinaturas = new List<Assinatura>();           
+            
+            AddNotifications(name, documento, email);
         }
 
         public Name Name { get; private set; }
@@ -24,13 +27,27 @@ namespace PagamentosDominio.Entidades
 
         public void IncluirAssinatura(Assinatura assinatura)
         {
-            //Se já haver assinatura ativa, cancela
-            foreach (var sub in Assinatura)
+           var hasSubscripitonActive = false;
+           foreach (var sub in _Assinaturas)
+           {
+               if (sub.Ativo)
+               {
+                   hasSubscripitonActive = true;
+               }
+           }
+            
+            //Pode ser feita validação dessa forma
+            AddNotifications(new Contract()
+                .Requires()
+                .IsFalse(hasSubscripitonActive,"Esudante.Assinatura", "Você já possui uma assinatura ativa")
+            );
+
+            //Ou dessa forma
+            if (hasSubscripitonActive)
             {
-                sub.Inativador();
+                AddNotification("Estudante.Assinatura","Você já tem uma assinatura ativa");
             }
 
-            _Assinaturas.Add(assinatura);
         }
         
     }

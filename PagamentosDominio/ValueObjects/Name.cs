@@ -9,6 +9,13 @@ namespace PagamentosDominio.ValueObjects
         {
             PrimeiroNome = primeiroNome;
             SegundoNome = segundoNome;
+
+            AddNotifications(new Contract()
+                .Requires()
+                .HasMinLen(PrimeiroNome,"Name.PrimeiroNome", "Nome deve cotar pelo menos 3 caracteres")
+                .HasMinLen(SegundoNome,"Name.SegundoNome", "Segundo Nome deve cotar pelo menos 3 caracteres")
+            );
+
         }
 
         public string PrimeiroNome { get; private set; }

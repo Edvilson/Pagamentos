@@ -94,3 +94,4 @@ C:\Cursos\Pagamentos\pagamentosdominioteste\obj\Debug\netcoreapp3.1\pagamentosdo
 C:\Cursos\Pagamentos\pagamentosdominioteste\obj\Debug\netcoreapp3.1\pagamentosdominioteste.csproj.CopyComplete
 C:\Cursos\Pagamentos\pagamentosdominioteste\obj\Debug\netcoreapp3.1\pagamentosdominioteste.dll
 C:\Cursos\Pagamentos\pagamentosdominioteste\obj\Debug\netcoreapp3.1\pagamentosdominioteste.pdb
+C:\Cursos\Pagamentos\pagamentosdominioteste\bin\Debug\netcoreapp3.1\Flunt.dll
