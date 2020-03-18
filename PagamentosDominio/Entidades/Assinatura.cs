@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Flunt.Validations;
 using PagamentosDominioComparti.Entidade;
 
@@ -21,7 +22,7 @@ namespace PagamentosDominio.Entidades
         public DateTime DtUltimaAtualizao { get; private set; }
         public DateTime? DtExpiracao { get; private set; }//? indica que a data é nulo
         public bool Ativo { get; private set; }
-        public IReadOnlyCollection<Pagamento> Pagamentos { get; set; }
+        public IReadOnlyCollection<Pagamento> Pagamentos { get { return _Pagamentos.ToArray();} }
 
         public void IncluirPagamento(Pagamento pagamento)
         {

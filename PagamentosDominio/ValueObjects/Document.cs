@@ -1,4 +1,5 @@
 using System;
+using Flunt.Validations;
 using PagamentosDominio.Enums;
 using PagamentosDominioComparti.ValueObjects;
 

@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PagamentosDominioComparti.ValueObjects;
 using System;
 
@@ -12,8 +13,8 @@ namespace PagamentosDominio.ValueObjects
 
             AddNotifications(new Contract()
                 .Requires()
-                .HasMinLen(PrimeiroNome,"Name.PrimeiroNome", "Nome deve cotar pelo menos 3 caracteres")
-                .HasMinLen(SegundoNome,"Name.SegundoNome", "Segundo Nome deve cotar pelo menos 3 caracteres")
+                .HasMinLen(PrimeiroNome, 3,"Name.PrimeiroNome", "Nome deve cotar pelo menos 3 caracteres")
+                .HasMinLen(SegundoNome, 3,"Name.SegundoNome", "Segundo Nome deve cotar pelo menos 3 caracteres")
             );
 
         }

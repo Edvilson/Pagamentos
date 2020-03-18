@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PagamentosDominioComparti.ValueObjects;
 
 namespace PagamentosDominio.ValueObjects

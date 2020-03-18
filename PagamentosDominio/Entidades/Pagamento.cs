@@ -2,6 +2,7 @@ using System;
 using PagamentosDominio.ValueObjects;
 using System.Collections.Generic;
 using PagamentosDominioComparti.Entidade;
+using Flunt.Validations;
 
 namespace PagamentosDominio.Entidades
 {
